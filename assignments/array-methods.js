@@ -85,13 +85,31 @@ console.log(ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
-// Find total number of participants by shirt size and log the result
-let runnersByShirtSize = [];
+// Print a list of unique company names, sorted ascending, that are participating in the run.
+
+let uniqueCompanies = [];
+
+uniqueCompanies = new Set(runners.map(runner => runner.company_name).sort());
+
+console.log(uniqueCompanies);
 
 
 
-
-console.log(runnersByShirtSize);
 // Problem 2
+// The company wants a list of emails of the participants. create a list of email addresses and log it to the console.
+
+let email_addresses = [];
+
+runners.forEach(runner => email_addresses.push(runner.email));
+
+console.log(email_addresses);
 
 // Problem 3
+// The company Skinix has requested a list of their employees who participated. Store that information in an array skinix_employyes
+// and log the data to the console.
+
+let skinix_employyes = [];
+
+skinix_employyes = runners.filter(runner => runner.company_name === 'Skinix');
+
+console.log(JSON.stringify(skinix_employyes));
