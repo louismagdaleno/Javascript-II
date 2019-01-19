@@ -105,11 +105,11 @@ runners.forEach(runner => email_addresses.push(runner.email));
 console.log(email_addresses);
 
 // Problem 3
-// The company Skinix has requested a list of their employees who participated. Store that information in an array skinix_employyes
+// The company Skinix has requested a list of their employees who participated. Store that information in an array skinix_employees
 // and log the data to the console.
 
-let skinix_employyes = [];
+let skinix_employees = [];
 
-skinix_employyes = runners.filter(runner => runner.company_name === 'Skinix');
+skinix_employees = runners.filter(runner => runner.company_name === 'Skinix');
 
-console.log(JSON.stringify(skinix_employyes));
+console.log(JSON.stringify(skinix_employees));
