@@ -71,7 +71,13 @@ function removeDuplicates(array, cb) {
 
   // Use a Set to include unique values. If not set, 
   // iterate over array and push to duplicateFree if duplicateFree does not already include it
-  duplicateFree = new Set(array);
+  //duplicateFree = new Set(array);
+  array.forEach(item => {
+      if (!duplicateFree.includes(item)) {
+        duplicateFree.push(item);
+      }
+     }
+    )
 
   return cb(duplicateFree);
 }

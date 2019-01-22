@@ -109,7 +109,6 @@ let totalShirtDonations = [];
 let sizes = new Set(runners.map(runner => runner.shirt_size));
 let iterator = sizes.values();
 
-
 sizes.forEach(item => totalShirtDonations.push( 
     runners.filter(runner => runner.shirt_size === item)
     .map(runner => runner.donation)
